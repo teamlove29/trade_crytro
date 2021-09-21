@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingTop="20dp"
+    tools:context=".MainActivity">
+
+
+<RelativeLayout
+    android:gravity="center_horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <TextView
+        android:id="@+id/name_coin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BTC/USD"
+        android:textColor="@color/black"
+        android:textSize="25sp"/>
+        <TextView
+            android:gravity="center_vertical"
+            android:id="@+id/price_coin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/name_coin"
+            android:layout_marginTop="5dp"
+            android:text="$42383.00"
+            android:textColor="@color/red"
+            android:textSize="18sp"/>
+
+    <Button
+        android:id="@+id/btn_buy"
+        android:layout_width="150dp"
+        android:layout_below="@+id/name_coin"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/green"
+        android:text="Buy"/>
+    <Button
+        android:id="@+id/btn_sell"
+        android:layout_width="150dp"
+        android:layout_below="@+id/name_coin"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/gray"
+        android:layout_toRightOf="@+id/btn_buy"
+        android:text="Sell"/>
+    <Button
+        android:id="@+id/mk_price"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_buy"
+        android:backgroundTint="@color/gray"
+        android:text="Martket Price"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view_total"
+        app:cardCornerRadius="5dp"
+        android:layout_marginBottom="1dp"
+        android:layout_below="@+id/mk_price"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/gray">
+
+        <RelativeLayout
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/ic_reduce"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/ic_reduce"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"/>
+
+            <EditText
+                android:id="@+id/edit_text_amount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/ic_reduce"
+                android:layout_toLeftOf="@+id/ic_add"
+                android:inputType="numberDecimal"
+                android:maxLength="7"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:textAlignment="center"
+                android:hint="Total(USD)"
+                android:gravity="right"
+                android:ellipsize="end"
+                android:background="@null"
+                android:textColorHint="@color/defaulthint"
+                android:textColor="@color/white"
+                tools:ignore="RtlCompat" />
+
+            <ImageView
+                android:id="@+id/ic_add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/ic_add"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"/>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+
+    <RelativeLayout
+        android:id="@+id/group_total"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/card_view_total">
+        <TextView
+            android:id="@+id/text_view_credit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="จำนวนที่มี"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:text="0.00 บาท"/>
+    </RelativeLayout>
+    <Button
+        android:id="@+id/btn_submit"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/group_total"
+        android:backgroundTint="@color/green"
+        android:text="Buy"/>
+
+</RelativeLayout>
+
+    <TextView
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/gray" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:paddingRight="15dp"
+        android:paddingLeft="15dp"
+        android:layout_below="@+id/card_view_total">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="History"
+            android:textStyle="bold"
+            android:textSize="16dp"
+            android:textColor="@color/black"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="Show All  >"
+            android:textSize="16dp"
+            android:textColor="@color/black"/>
+    </RelativeLayout>
+
+    <TextView
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/gray" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:paddingRight="15dp"
+        android:paddingLeft="15dp"
+        android:layout_below="@+id/card_view_total">
+        <TextView
+            android:id="@+id/history_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="3dp"
+            android:text="Buy - "
+            android:textColor="@color/black"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="3dp"
+            android:layout_toRightOf="@+id/history_status"
+            android:text="15,000.00 THB"
+            android:textColor="@color/black"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/history_status"
+            android:text="22/09/2021 22:38:31"
+            android:textSize="12sp"
+            android:textColor="@color/black"/>
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:text="Buy"
+            android:textSize="12sp"
+            android:clickable="false"
+            android:backgroundTint="@color/green"
+            android:textColor="@color/white"/>
+    </RelativeLayout>
+
+    <TextView
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/gray" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:paddingRight="15dp"
+        android:paddingLeft="15dp"
+        android:layout_below="@+id/card_view_total">
+        <TextView
+            android:id="@+id/history_status2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="3dp"
+            android:text="Sell - "
+            android:textColor="@color/black"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="3dp"
+            android:layout_toRightOf="@+id/history_status2"
+            android:text="2,300.00 THB"
+            android:textColor="@color/black"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/history_status2"
+            android:text="24/09/2021 23:11:03"
+            android:textSize="12sp"
+            android:textColor="@color/black"/>
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:text="Sell"
+            android:textSize="12sp"
+            android:clickable="false"
+            android:backgroundTint="@color/red"
+            android:textColor="@color/white"/>
+    </RelativeLayout>
+
+    <TextView
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/gray" />
+
+
+</LinearLayout>
