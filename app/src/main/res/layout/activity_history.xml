@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".UI.HistoryActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:paddingRight="15dp"
+        android:paddingLeft="15dp"
+        android:layout_below="@+id/card_view_total">
+        <TextView
+            android:id="@+id/history_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="3dp"
+            android:text="Buy - "
+            android:textColor="@color/black"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="3dp"
+            android:layout_toRightOf="@+id/history_status"
+            android:text="15,000.00 THB"
+            android:textColor="@color/black"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/history_status"
+            android:text="22/09/2021 22:38:31"
+            android:textSize="12sp"
+            android:textColor="@color/black"/>
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:text="ซื้อ"
+            android:textSize="12sp"
+            android:clickable="false"
+            android:backgroundTint="@color/green"
+            android:textColor="@color/white"/>
+    </RelativeLayout>
+
+    <TextView
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/gray" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:paddingRight="15dp"
+        android:paddingLeft="15dp"
+        android:layout_below="@+id/card_view_total">
+        <TextView
+            android:id="@+id/history_status2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="3dp"
+            android:text="Sell - "
+            android:textColor="@color/black"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="3dp"
+            android:layout_toRightOf="@+id/history_status2"
+            android:text="2,300.00 THB"
+            android:textColor="@color/black"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/history_status2"
+            android:text="24/09/2021 23:11:03"
+            android:textSize="12sp"
+            android:textColor="@color/black"/>
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:text="ขาย"
+            android:textSize="12sp"
+            android:clickable="false"
+            android:backgroundTint="@color/red"
+            android:textColor="@color/white"/>
+    </RelativeLayout>
+
+    <TextView
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/gray" />
+
+</LinearLayout>

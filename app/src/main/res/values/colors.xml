@@ -9,9 +9,17 @@
     <color name="white">#FFFFFFFF</color>
     <color name="red">#FF0000</color>
     <color name="green">#32CD32</color>
+    <color name="btnGreen">#27AE60</color>
     <color name="gray">#808080</color>
     <color name="disable_forground_grey">#42221f</color>
     <color name="disable_thumb_grey">#1c0000</color>
     <color name="disable_thumb_green">#46bdbf</color>
     <color name="defaulthint">#C0C0C0</color>
+    <color name="gold">#CC9900</color>
+    <color name="forex">#66CC33</color>
+    <color name="futures">#3366CC</color>
+    <color name="crypto">#FF9933</color>
+    <color name="whiteSmoke">#DCDCDC</color>
+    <color name="lightGray">#566573</color>
+    <color name="sublightGray">#808B96</color>
 </resources>
